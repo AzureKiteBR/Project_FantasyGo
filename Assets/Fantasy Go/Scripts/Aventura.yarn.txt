@@ -1,0 +1,228 @@
+title: Inicio
+tags: 
+colorID: 0
+position: 755,195
+---
+<<set $hp to 100>>
+<<set $moedas to 0>>
+<<set $dias to 0>>
+<<set $ataque to 5>>
+
+[[Iniciar sua aventura!|Principal]]
+===
+title: Principal
+tags: 
+colorID: 0
+position: 754,463
+---
+<<if $dias < 7 >>
+Olá Aventureiro, você esta em uma aventura fazem alguns dias. 
+<<elseif $dias > 7>>
+Olá Aventureiro, você esta em uma aventura fazem algumas semanas. 
+<<endif>>
+
+<<if $moedas < 30>>
+Você tem poucas moedas. 
+<<elseif $moedas < 60>>
+Você tem algumas moedas. 
+<<elseif $moedas >99>>
+Você tem muitas moedas, acho que ja da para melhorar seu equipamento. 
+<<endif>>
+
+<<if $hp = 100>>
+Você esta bem descansado, pronto para mais aventuras.
+<<elseif $hp < 40>>
+Você esta um pouco cansado, seria bom descansar.
+<<elseif $hp < 100>>
+Você esta um pouco suado mas ainda disposto a se aventurar.
+<<endif>>
+
+[[Descanso|Descanso]]
+[[Compras|Compras]]
+[[Aventura|InicializacaoDaAventura]]
+===
+title: Descanso
+tags: 
+colorID: 0
+position: 374,470
+---
+<<set $hp to 100>>
+<<if $dias = 0>>
+<<set $dias to 1>>
+<<elseif $dias = 1>>
+<<set $dias to 2>>
+<<elseif $dias = 2>>
+<<set $dias to 3>>
+<<elseif $dias = 3>>
+<<set $dias to 4>>
+<<elseif $dias = 4>>
+<<set $dias to 5>>
+<<elseif $dias = 5>>
+<<set $dias to 6>>
+<<elseif $dias = 6>>
+<<set $dias to 7>>
+<<elseif $dias = 7>>
+<<set $dias to 8>>
+<<elseif $dias = 8>>
+<<set $dias to 9>>
+<<elseif $dias = 9>>
+<<set $dias to 10>>
+<<elseif $dias = 10>>
+<<set $dias to 11>>
+<<elseif $dias = 11>>
+<<set $dias to 12>>
+<<elseif $dias = 12>>
+<<set $dias to 13>>
+<<endif>>
+    Você se recupera após dormir por uma noite, sua energia volta ao normal e mais um dia se passou!
+
+
+[[Retornar|Principal]]
+===
+title: Compras
+tags: 
+colorID: 0
+position: 1131,463
+---
+Olá Aventureiro, posso melhorar a sua arma por 100 moedas de ouro, o que tal?
+
+    <<if $moedas < 100>>
+        Ahhh que pena, você não tem dinheiro suficiente, volte quando tiver 100 moedas de ouro!
+    <<elseif $moedas >= 100>>
+        [[Melhorar sua arma!|Upgrade]]
+    <<endif>>
+
+
+[[Principal|Principal]]
+===
+title: Aventura
+tags: 
+colorID: 0
+position: 750,732
+---
+Um monstro aparece!
+<<if $dias < 5>>
+<<set $hpDoMonstro to 20>>
+Este monstro parece fraco.
+<<elseif $dias >= 12>>
+    <<set $hpDoMonstro to 200>>
+Meu DEUS é um dragão enorme!
+<<elseif $dias >= 10>>
+    <<set $hpDoMonstro to 100>>
+Este monstro é assustador!
+<<elseif $dias >= 5>>
+    <<set $hpDoMonstro to 40>>
+Este monstro parece forte.
+
+
+<<endif>>
+[[Batalhar|Batalhar]]
+[[Fugir|Principal]]
+===
+title: Batalhar
+tags: 
+colorID: 0
+position: 1073,734
+---
+O monstro lhe acertou!
+    <<set $hp to $hp - 10>>
+        <<if $hp = 100>>
+Você esta bem descansado, pronto para continuar.
+        <<elseif $hp < 20>>
+Sua visão começa a ficar turva, é melhor correr!>>
+        <<elseif $hp < 40>>
+Você esta um pouco surrado, seria bom tomar cuidado.
+        <<elseif $hp < 100>>
+Você esta um pouco suado e com alguns arranhões mas ainda disposto.
+    <<endif>>
+    <<if $hp < 1>>
+        Você esta [[morto!|Inicio]]
+    <<endif>>
+
+    Você acerta o monstro!
+
+    <<set $hpDoMonstro = $hpDoMonstro - $ataque>>
+    
+    <<if $hpDoMonstro < 1>>
+        O monstro morre com o seu golpe! [[Coletar os itens.|MonstroMorto]]
+    <<elseif $hpDoMonstro > 1>>
+        <<if $hpDoMonstro = 100>>
+O monstro esta saudavel.
+       <<elseif $hpDoMonstro < 20>>
+O monstro esta quase morto.
+        <<elseif $hpDoMonstro < 40>>
+O monstro esta um pouco fraco.
+        <<elseif $hpDoMonstro < 100>>
+O monstro esta com alguns arranhões.
+
+ 
+        <<endif>>
+        [[Batalhar|Batalhar]]
+        [[Fugir|Principal]]
+    <<endif>>
+===
+title: MonstroMorto
+tags: 
+colorID: 0
+position: 1349,737
+---
+<<set $qtdeMonstrosMortos to $qtdeMonstrosMortos + 1>>
+
+<<set $drop to 5 * $qtdeMonstrosMortos>>
+
+<<set $spoils to $spoils + $drop>>
+
+    Você coletou algumas moedas oriundas do que sobrou do monstro!
+
+<<if $qtdeMonstrosMortos < 3>>
+Você matou alguns monstros.
+<<elseif $qtdeMonstrosMortos < 10>>
+Você conta nos dedos a quantidade de monstros que matou!
+<<elseif $qtdeMonstrosMortos >= 10>>
+Você perde a conta de quantos monstros matou! Talvez seja melhor voltar para casa.
+<<endif>>
+
+    [[Continuar...|Aventura]]
+    [[Voltar para casa!|ColetarSpoils]]
+===
+title: InicializacaoDaAventura
+tags: 
+colorID: 0
+position: 422,725
+---
+<<set $spoils to 0>>
+
+<<set $qtdeMonstrosMortos to 0>>
+
+Você reune seus equipamentos para uma aventura!
+
+[[Aventura|Aventura]]
+===
+title: ColetarSpoils
+tags: 
+colorID: 0
+position: 1374,1002
+---
+<<set $moedas to $moedas + $spoils>>
+
+[[Coletar suas moedas e retornar.|Principal]]
+===
+title: Upgrade
+tags: 
+colorID: 0
+position: 1387,467
+---
+<<if $ataque = 5>>
+<<set $ataque to 10>>
+O ferreiro então melhora a sua arma, e agora o seu ataque fica mais forte.
+<<elseif $ataque = 10>>
+<<set $ataque to 15>>
+O ferreiro então melhora a sua arma, e agora o seu ataque fica ainda mais forte.
+<<elseif $ataque = 15>>
+<<set $ataque = 20>>
+O ferreiro então melhora a sua arma, e agora o seu ataque fica muito forte.
+<<endif>>
+<<set $moedas = 0>>
+
+[[Retornar...|Principal]]
+===

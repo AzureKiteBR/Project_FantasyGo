@@ -1,0 +1,182 @@
+[
+	{
+		"title": "Inicio",
+		"tags": "\r",
+		"body": "No meio da noite você escuta um susurro em seu ouvido... E então tres batidas na porta, achando que pode ser algo importante se levanta e vai verificar quem é à quela hora da noite.\r\n\r\nMas quando abre a porta, para a sua surpresa, não tem ninguem lá e nem no corredor, apenas alguns bebados e dois funcionarios no andar de baixo da taverna.\r\n\r\nAo olhar para o chão, ve um livro de capa de couro com um simbolo estranho nela. Você o pega, fecha a porta e curioso pelo seu conteudo o abre.\r\n\r\nO livro está todo em branco com exeção de um mapa onde apenas mostra a capital Dien e o vilareijo Alor onde você se encontra.\r\n\r\nEm sua mão o livro muda de pagina sosinho e volta para a primeira, então uma mensagem aparece...\r\n\r\n\r\n\"Olá.... Meu nome é Alderon, você alguma vez já sonhou em ser grande? Se sim, eu posso te ajudar, não ira ser facil e seguro, porem a sua vida já está em risco devido ao fato de você ser o ultimo a me segurar, mas não se preocupe, algo está para acontecer e se você não me ajudar talves não morra hoje, mas garanto que ira morrer em breve, enfim, você aceitaria ser meu novo mestre e me ajudar a evitar o fim? Se sim escreva o seu nome para que possamos salvar essa realidade, lembrando que escrevendo o seu nome você estára assinando um contrato comigo\"\r\n\r\n[[Assinar seu nome|Cap1_1]]\r\n\r\n\r\n",
+		"position": {
+			"x": -90,
+			"y": 140
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_1",
+		"tags": "\r",
+		"body": "\r\nEm sua mente você escuta:\r\n\"Mestre Nemesi, agradeço por ter me ajudado, sei que talvez não gostaria de se envolver nisso, mas devido ao seu destino, ao meu e ao que está para acontecer, não podemos nos dar ao luxo de não interfirir. Bom, como eu já disse, meu nome é Alderon, eu fui um bruxo antes de ser selado nesse diario, sim eu já mexi com muitas coisas pesadas e tem momentos do meu passado que eu gostaria de que não tivessem acontecido, porem aqui estou para tentar fazer algo certo, algo que talvez possoa redimir minha alma e finalmente trazer paz ao que resta do meu espirito.\"\r\n\r\n\"Primeiramente, existe algo me caçando, você ainda não está em condiçoes de combater isso, o que deve fazer agora é fugir e ir para a capital, lá vá direto para a torre branca, na entrada diga que tem uma mensagem para o Grão Mestre Jir, ele é o conselheiro religioso do rei, tenha certeza de falar sobre min apenas com ele. Vá rapido eu consigo sentir a presença negra da queles que me caçam ficando mais forte.\"\r\n\r\n[[Sair pela janela com o que tem no corpo|Cap1_1.1]]\r\n[[Arrumar suas coisas e sair correndo da taverna|Cap1_1.2]]\r\n[[Sair pela porta dos fundos sem levar nada alem do que tem no corpo|Cap1_1.3]]\r\n\r\n\r\n\r\n",
+		"position": {
+			"x": -88,
+			"y": 432
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_1.1",
+		"tags": "\r",
+		"body": "Ao sair da taverna você percebe que uma neblina muito forte envolveu o vilarejo, por algum motivo desconhecido o medo lhe consome, ao fundo você escuta passos pesados e barulho de metal rangendo... Tomado pelo panico você corre o mais rapido que pode em direção a capital, apos andar alguns minutos começa a escutar barulhos de gritos, olha para tras e ve o vilarejo em chamas.\r\n[[Seguir rumo a capital Dien...|Cap1_2]]\r\n\r\n\r\n",
+		"position": {
+			"x": -94,
+			"y": 699
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3",
+		"tags": "\r",
+		"body": "A torre é alta e aparenta ser antiga, ao bater na grande porta de madeira, um garoto de cabelos loiros o atende, ele então pergunta \"Em que posso ajuda-lo?\"\r\n[[\"Tenho uma Mensagem para Jir e apenas posso tratar com ele\"|Cap1_3.1]]\r\n[[\"Me pediram para conversar com o grão mestre, é sobre um livro, para ser mais exato o livro me pediu\"|Cap1_3.2]]\r\n[[\"O pirralho, chama logo seu Grão Mestre, que eu to sem tempo, tem um livro falante querendo falar com ele\"|Cap1_3.3]]\n",
+		"position": {
+			"x": -82,
+			"y": 1278
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.3",
+		"tags": "\r",
+		"body": "\"Senhor entre, irei chamalo\"\r\n[[Entrar empurrando o pirralho...|Cap1_3.2.1]]\n",
+		"position": {
+			"x": -373,
+			"y": 1542
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2.3",
+		"tags": "\r",
+		"body": "O homen olha para você e diz:\r\n\"Jir está preso, ele traiu a coroa e a ordem, o unico jeito de falar com ele é indo para a prisão visitalo, isso se os guardas permitirem.\"\r\n\r\nVocê então agradeçe, diz que a mensagem era sobre um familiar morto e sai da torre.\r\n\r\n[[Saindo da torre...|Cap1_4]]\r\n",
+		"position": {
+			"x": -289,
+			"y": 2081
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_1.2",
+		"tags": "\r",
+		"body": "Ao descer as escadas, correndo em direção a porta percebe uma neblina muito densa do lado de fora, dessa neblina surge um ser de 2,5 metros, trajando uma armadura negra cheia de espinhos enferrujados, dentro de seu elmo você consegue sentir um vazio, ele olha para você e o mais importante, olha para o diario em suas mãos. Os bebados se levantam horroziados com excessão de um, um velho trajando uma armadura prateada, ele então pega seu martelo e corre na direção da criatura gritando \"Volte para o inferno de onde veio criatura nefasta, horrorosa, feia e filho de uma malusketa!\". Porem em um movimento muito rapido a criatura o corta ao meio, logo após levanta a mão e as paredes começam a pegar fogo. Não existe mais escapatoria. O ser vem em sua direção pega o diario e em um movimento, sua grande espada lhe atravessa o peito. Você sente sua alma sendo sugada e cai vendo o fogo consumir tudo em volta.\r\n[[Game Over|Inicio]]\r\n\r\n\r\n",
+		"position": {
+			"x": 178,
+			"y": 434
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_1.3",
+		"tags": "\r",
+		"body": "Você escapa sem ser visto..\r\n[[Continuar|Cap1_1.1]]\r\n\r\n\r\n",
+		"position": {
+			"x": -423,
+			"y": 568
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_2",
+		"tags": "\r",
+		"body": "Ao chegar em Dien ainda é de noite, você olha em volta e ve uma torre branca na parte leste, sem pensar muito e aproveitando a falta de movimento nas ruas, você segue rapidamente em direção a ela.\r\nEm sua mente você escuta:\r\n\"Mestre, lembre-se, não conte para ninguem alem de Jir que eu existo e não me mostre para mais ninguem, aproposito eu não tive tempo, mas Jir é um velho, barbudo, careca e com runas antigas tatuadas em sua cabeça, se ele estiver lá, já me sentiu e ira receber você na porta do templo, enfim não se esqueça do que eu lhe falei.\"\r\n\r\n[[Seguir para a torre|Cap1_3]]\n",
+		"position": {
+			"x": -93,
+			"y": 956
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.1",
+		"tags": "\r",
+		"body": "O garoto então diz:\"O Antigo mestre Jir está preso, é algo importante?\"\r\n\r\nVocê responde que não e agradeçe.\r\n\r\n[[Continuar|Cap1_4]]\r\n\r\n\r\n",
+		"position": {
+			"x": -83,
+			"y": 1530
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2",
+		"tags": "\r",
+		"body": "\"Senhor entre, irei chamalo\"\r\n[[Entrar...|Cap1_3.2.1]]\n",
+		"position": {
+			"x": 214,
+			"y": 1519
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2.2.1",
+		"tags": "\r",
+		"body": "Você entrega o diário para o velho\r\n[[Continuar.|Cap1_3.2.3]]\r\n\r\n\r\n",
+		"position": {
+			"x": -663,
+			"y": 1538
+		},
+		"colorID": 0
+	},
+	{
+		"title": "StoryAuthor",
+		"tags": "\r",
+		"body": "Anonymous\r\n\r\n",
+		"position": {
+			"x": -761,
+			"y": 548
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_4",
+		"tags": "\r",
+		"body": "Visto que Jir não ira mudar de lugar tão cedo você decide ir para uma taverna descançar e comer algo, pois o dia já está amanhecendo.\r\n[[Seguir para a Taverna|Cap2]]\r\n\r\n\r\n",
+		"position": {
+			"x": 63,
+			"y": 2076
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2.1",
+		"tags": "\r",
+		"body": "Você entra e em pouco tempo um senhor com cabelos brancos, sem barba e trajando um manto azul claro aparece na sala e fala:\r\n\"Qual a urgencia meu jovem? O que te traz aqui?\"\r\n\r\n[[<<Entregar o diario>>|Cap1_3.2.2.1]]\r\n[[\"O senhor é o Jir? Preciso mostrar isso para ele\"<<mostrar o diario>>|Cap1_3.2.2.2]]\r\n[[\"Tenho uma mensagem para Jir\"|Cap1_3.2.2.3]]\r\n\r\n\r\n\r\n",
+		"position": {
+			"x": -374,
+			"y": 1803
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap2",
+		"tags": "\r",
+		"body": "Você chega na Taverna, come muito e dorme encima da mesa mesmo...\r\n[[Por enquanto a história só vai até aqui, retorne na próxima semana para avançar mais na história|Inicio]]\r\n\r\n\r\n",
+		"position": {
+			"x": 658,
+			"y": 2092
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2.2.2",
+		"tags": "\r",
+		"body": "Ao ver o diário o homem o toma de sua mão.\r\n[[Continuar|Cap1_3.2.3]]\r\n\r\n\r\n",
+		"position": {
+			"x": -689,
+			"y": 1837
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Cap1_3.2.2.3",
+		"tags": "\r",
+		"body": "O homen olha para você e diz:\"Jir está preso, ele traiu a coroa e a ordem, o unico jeito de falar com ele é indo para a prisão visitalo, isso se os guardas permitirem.\"\r\n\r\nVocê então agradeçe, diz que a mensagem era sobre um familiar morto e sai da torre.\r\n\r\n[[Saindo da torre...|Cap1_4]]\r\n\r\n\r\n\r\n",
+		"position": {
+			"x": 203,
+			"y": 1788
+		},
+		"colorID": 0
+	}
+]

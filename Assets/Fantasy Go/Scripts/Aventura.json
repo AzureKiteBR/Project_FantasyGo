@@ -1,0 +1,102 @@
+[
+	{
+		"title": "Inicio",
+		"tags": "",
+		"body": "<<set $hp to 100>>\n<<set $moedas to 0>>\n<<set $dias to 0>>\n<<set $ataque to 5>>\n\n[[Iniciar sua aventura!|Principal]]\n",
+		"position": {
+			"x": 755,
+			"y": 195
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Principal",
+		"tags": "",
+		"body": "<<if $dias < 7 >>\nOlá Aventureiro, você esta em uma aventura fazem alguns dias. \n<<elseif $dias > 7>>\nOlá Aventureiro, você esta em uma aventura fazem algumas semanas. \n<<endif>>\n\n<<if $moedas < 30>>\nVocê tem poucas moedas. \n<<elseif $moedas < 60>>\nVocê tem algumas moedas. \n<<elseif $moedas >99>>\nVocê tem muitas moedas, acho que ja da para melhorar seu equipamento. \n<<endif>>\n\n<<if $hp = 100>>\nVocê esta bem descansado, pronto para mais aventuras.\n<<elseif $hp < 40>>\nVocê esta um pouco cansado, seria bom descansar.\n<<elseif $hp < 100>>\nVocê esta um pouco suado mas ainda disposto a se aventurar.\n<<endif>>\n\n[[Descanso|Descanso]]\n[[Compras|Compras]]\n[[Aventura|InicializacaoDaAventura]]\n",
+		"position": {
+			"x": 754,
+			"y": 463
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Descanso",
+		"tags": "",
+		"body": "<<set $hp to 100>>\n<<if $dias = 0>>\n<<set $dias to 1>>\n<<elseif $dias = 1>>\n<<set $dias to 2>>\n<<elseif $dias = 2>>\n<<set $dias to 3>>\n<<elseif $dias = 3>>\n<<set $dias to 4>>\n<<elseif $dias = 4>>\n<<set $dias to 5>>\n<<elseif $dias = 5>>\n<<set $dias to 6>>\n<<elseif $dias = 6>>\n<<set $dias to 7>>\n<<elseif $dias = 7>>\n<<set $dias to 8>>\n<<elseif $dias = 8>>\n<<set $dias to 9>>\n<<elseif $dias = 9>>\n<<set $dias to 10>>\n<<elseif $dias = 10>>\n<<set $dias to 11>>\n<<elseif $dias = 11>>\n<<set $dias to 12>>\n<<elseif $dias = 12>>\n<<set $dias to 13>>\n<<endif>>\n    Você se recupera após dormir por uma noite, sua energia volta ao normal e mais um dia se passou!\n\n\n[[Retornar|Principal]]\n",
+		"position": {
+			"x": 374,
+			"y": 470
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Compras",
+		"tags": "",
+		"body": "Olá Aventureiro, posso melhorar a sua arma por 100 moedas de ouro, o que tal?\n\n    <<if $moedas < 100>>\n        Ahhh que pena, você não tem dinheiro suficiente, volte quando tiver 100 moedas de ouro!\n    <<elseif $moedas >= 100>>\n        [[Melhorar sua arma!|Upgrade]]\n    <<endif>>\n\n\n[[Principal|Principal]]\n",
+		"position": {
+			"x": 1131,
+			"y": 463
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Aventura",
+		"tags": "",
+		"body": "Um monstro aparece!\n<<if $dias < 5>>\n<<set $hpDoMonstro to 20>>\nEste monstro parece fraco.\n<<elseif $dias >= 12>>\n    <<set $hpDoMonstro to 200>>\nMeu DEUS é um dragão enorme!\n<<elseif $dias >= 10>>\n    <<set $hpDoMonstro to 100>>\nEste monstro é assustador!\n<<elseif $dias >= 5>>\n    <<set $hpDoMonstro to 40>>\nEste monstro parece forte.\n\n\n<<endif>>\n[[Batalhar|Batalhar]]\n[[Fugir|Principal]]\n",
+		"position": {
+			"x": 750,
+			"y": 732
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Batalhar",
+		"tags": "",
+		"body": "O monstro lhe acertou!\n    <<set $hp to $hp - 10>>\n        <<if $hp = 100>>\nVocê esta bem descansado, pronto para continuar.\n        <<elseif $hp < 20>>\nSua visão começa a ficar turva, é melhor correr!>>\n        <<elseif $hp < 40>>\nVocê esta um pouco surrado, seria bom tomar cuidado.\n        <<elseif $hp < 100>>\nVocê esta um pouco suado e com alguns arranhões mas ainda disposto.\n    <<endif>>\n    <<if $hp < 1>>\n        Você esta [[morto!|Inicio]]\n    <<endif>>\n\n    Você acerta o monstro!\n\n    <<set $hpDoMonstro = $hpDoMonstro - $ataque>>\n    \n    <<if $hpDoMonstro < 1>>\n        O monstro morre com o seu golpe! [[Coletar os itens.|MonstroMorto]]\n    <<elseif $hpDoMonstro > 1>>\n        <<if $hpDoMonstro = 100>>\nO monstro esta saudavel.\n       <<elseif $hpDoMonstro < 20>>\nO monstro esta quase morto.\n        <<elseif $hpDoMonstro < 40>>\nO monstro esta um pouco fraco.\n        <<elseif $hpDoMonstro < 100>>\nO monstro esta com alguns arranhões.\n\n \n        <<endif>>\n        [[Batalhar|Batalhar]]\n        [[Fugir|Principal]]\n    <<endif>>\n",
+		"position": {
+			"x": 1073,
+			"y": 734
+		},
+		"colorID": 0
+	},
+	{
+		"title": "MonstroMorto",
+		"tags": "",
+		"body": "<<set $qtdeMonstrosMortos to $qtdeMonstrosMortos + 1>>\n\n<<set $drop to 5 * $qtdeMonstrosMortos>>\n\n<<set $spoils to $spoils + $drop>>\n\n    Você coletou algumas moedas oriundas do que sobrou do monstro!\n\n<<if $qtdeMonstrosMortos < 3>>\nVocê matou alguns monstros.\n<<elseif $qtdeMonstrosMortos < 10>>\nVocê conta nos dedos a quantidade de monstros que matou!\n<<elseif $qtdeMonstrosMortos >= 10>>\nVocê perde a conta de quantos monstros matou! Talvez seja melhor voltar para casa.\n<<endif>>\n\n    [[Continuar...|Aventura]]\n    [[Voltar para casa!|ColetarSpoils]]\n",
+		"position": {
+			"x": 1349,
+			"y": 737
+		},
+		"colorID": 0
+	},
+	{
+		"title": "InicializacaoDaAventura",
+		"tags": "",
+		"body": "<<set $spoils to 0>>\n\n<<set $qtdeMonstrosMortos to 0>>\n\nVocê reune seus equipamentos para uma aventura!\n\n[[Aventura|Aventura]]\n",
+		"position": {
+			"x": 422,
+			"y": 725
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ColetarSpoils",
+		"tags": "",
+		"body": "<<set $moedas to $moedas + $spoils>>\n\n[[Coletar suas moedas e retornar.|Principal]]\n",
+		"position": {
+			"x": 1374,
+			"y": 1002
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Upgrade",
+		"tags": "",
+		"body": "<<if $ataque = 5>>\n<<set $ataque to 10>>\nO ferreiro então melhora a sua arma, e agora o seu ataque fica mais forte.\n<<elseif $ataque = 10>>\n<<set $ataque to 15>>\nO ferreiro então melhora a sua arma, e agora o seu ataque fica ainda mais forte.\n<<elseif $ataque = 15>>\n<<set $ataque = 20>>\nO ferreiro então melhora a sua arma, e agora o seu ataque fica muito forte.\n<<endif>>\n<<set $moedas = 0>>\n\n[[Retornar...|Principal]]\n",
+		"position": {
+			"x": 1387,
+			"y": 467
+		},
+		"colorID": 0
+	}
+]
